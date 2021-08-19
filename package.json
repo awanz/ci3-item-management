@@ -1,0 +1,17 @@
+{
+  "name": "ci3-adminbsb",
+  "version": "1.0.0",
+  "description": "This repository just make easy for new project Codeigniter 3 and integrated with Admin BSB - Material Design. Just Clone this repository.",
+  "main": "index.js",
+  "dependencies": {
+    "adminbsb-materialdesign": "^1.0.7"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.28"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "awan",
+  "license": "MIT"
+}
