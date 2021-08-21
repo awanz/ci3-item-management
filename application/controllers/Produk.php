@@ -135,4 +135,44 @@ class Produk extends CI_Controller {
             $this->load->view('master', $this->data);
 		}
 	}
+
+    public function foto($id = null)
+	{
+        $where = array(
+            'idProduk' => $id
+        );
+        $result = $this->ProdukModel->getBy($where);
+        $this->data['data'] = $result->row();
+        $this->data['content'] = "produk/foto";
+        $this->load->view('master', $this->data);   
+	}
+	
+    public function foto_process($id = null)
+	{
+        // UPLOAD FILE
+        $config['upload_path'] = './assets/images/produk/';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['max_size']	= '2048';
+        $this->load->library('upload', $config);
+        if ( ! $this->upload->do_upload('foto')){
+            $error = array('error' => $this->upload->display_errors());
+            $this->session->set_flashdata('alert_status', "error");
+            $this->session->set_flashdata('alert_message', $error['error']);
+            redirect('/produk/'.$id."/foto", 'refresh');
+        }else {
+            $data = array('upload_data' => $this->upload->data());
+            $dataku = $data['upload_data'];
+            $gambar = $dataku['file_name'];
+        }
+        // END UPLOAD FILE
+
+        $dataPost['foto'] = $gambar;
+        $where = array(
+            'idProduk' => $id
+        );
+        $result = $this->ProdukModel->update($where, $dataPost);
+        $this->session->set_flashdata('alert_status', "success");
+        $this->session->set_flashdata('alert_message', 'Foto produk berhasil diubah.');
+        redirect('/produk/'.$id."/foto", 'refresh');
+	}
 }

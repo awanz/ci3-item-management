@@ -75,10 +75,12 @@ $route['merek/(:num)/delete']['get'] = 'merek/delete/$1';
 $route['merek/(:num)/edit']['get'] = 'merek/edit/$1';
 $route['merek/(:num)/edit']['post'] = 'merek/edit_process/$1';
 
-// Merek
+// Produk
 $route['produk']['get'] = 'produk/index';
 $route['produk/create']['get'] = 'produk/create';
 $route['produk/create']['post'] = 'produk/create_process';
 $route['produk/(:num)/delete']['get'] = 'produk/delete/$1';
 $route['produk/(:num)/edit']['get'] = 'produk/edit/$1';
 $route['produk/(:num)/edit']['post'] = 'produk/edit_process/$1';
+$route['produk/(:num)/foto']['get'] = 'produk/foto/$1';
+$route['produk/(:num)/foto']['post'] = 'produk/foto_process/$1';

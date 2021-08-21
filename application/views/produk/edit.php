@@ -3,7 +3,7 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    Buat Produk
+                    Edit Produk
                 </h2>
             </div>
             <div class="body">

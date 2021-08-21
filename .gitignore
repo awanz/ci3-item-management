@@ -29,3 +29,6 @@ composer.lock
 node_modules
 
 assets/adminbsb
+assets/images/produk/*.png
+assets/images/produk/*.jpg
+assets/images/produk/*.jpeg

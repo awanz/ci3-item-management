@@ -43,7 +43,7 @@
                                 <td><?= $value->namaProduk ?></td>
                                 <td><?= $value->harga ?></td>
                                 <td><?= $value->stok ?></td>
-                                <td><a href="<?= base_url("produk/".$value->idProduk."/edit") ?>" class="btn bg-cyan waves-effect">Edit</a> <a href="<?= base_url("produk/".$value->idProduk."/delete") ?>" class="btn bg-red waves-effect">Delete</a></td>
+                                <td><a href="<?= base_url("produk/".$value->idProduk."/foto") ?>" class="btn bg-blue waves-effect">Ganti Foto</a> <a href="<?= base_url("produk/".$value->idProduk."/edit") ?>" class="btn bg-cyan waves-effect">Edit</a> <a href="<?= base_url("produk/".$value->idProduk."/delete") ?>" class="btn bg-red waves-effect">Delete</a></td>
                             </tr>
                             <?php $no++; } ?>
                         </tbody>
