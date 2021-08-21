@@ -18,10 +18,6 @@ class Produk extends CI_Controller {
 
         if(empty($this->data['user']['level'])){
             redirect('login');
-        }else{
-            if ($this->data['user']['level'] != "admin") {
-                redirect('dashboard');
-            }            
         }
     }
 
